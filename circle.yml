@@ -5,7 +5,7 @@ general:
 
 machine:
   node:
-    version: 6.5.0
+    version: 8.9.4
 
 dependencies:
   pre:
@@ -15,6 +15,7 @@ test:
   pre:
     - mkdir -p ./test/results
   override:
+    - npm -s run test
     - set -o pipefail && npm -s run test:xunit > ./test/results/tape.xml
     - set -o pipefail && npm -s run test:coverage-check
   post:
