@@ -15,7 +15,7 @@ Test('Client', clientTest => {
   let sandbox
 
   clientTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
     sandbox.stub(SoapClient, 'request')
     sandbox.stub(Result, 'queryNumber')
     sandbox.stub(Result, 'queryProfile')

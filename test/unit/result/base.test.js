@@ -9,7 +9,7 @@ Test('BaseResult', baseResultTest => {
   let sandbox
 
   baseResultTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
     t.end()
   })
 

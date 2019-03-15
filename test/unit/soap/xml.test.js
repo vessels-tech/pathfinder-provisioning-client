@@ -15,7 +15,7 @@ Test('XmlConverter', xmlConverterTest => {
   let XmlConverter
 
   xmlConverterTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
 
     parserStub = sandbox.stub()
     builderStub = sandbox.stub()

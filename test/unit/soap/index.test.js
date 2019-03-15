@@ -16,7 +16,7 @@ Test('SoapClient', soapClientTest => {
   let SoapClient
 
   soapClientTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
 
     postStub = sandbox.stub()
     toJsStub = sandbox.stub()

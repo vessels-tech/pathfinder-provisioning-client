@@ -13,7 +13,7 @@ Test('Index', indexTest => {
   let Index
 
   indexTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
 
     clientSpy = sandbox.spy()
     recordSpy = sandbox.spy()

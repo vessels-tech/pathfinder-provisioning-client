@@ -10,7 +10,7 @@ Test('QueryNumberResult', resultTest => {
   let sandbox
 
   resultTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
     sandbox.stub(Phone, 'format')
     t.end()
   })

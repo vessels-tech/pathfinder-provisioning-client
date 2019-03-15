@@ -14,7 +14,7 @@ Test('Result', resultTest => {
   let Result
 
   resultTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
 
     baseResultStub = sandbox.stub()
     queryNumberResultStub = sandbox.stub()

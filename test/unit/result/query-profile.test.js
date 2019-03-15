@@ -9,7 +9,7 @@ Test('QueryProfileResult', resultTest => {
   let sandbox
 
   resultTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
     t.end()
   })
 

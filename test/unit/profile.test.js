@@ -9,7 +9,7 @@ Test('Profile', profileTest => {
   let sandbox
 
   profileTest.beforeEach(t => {
-    sandbox = Sinon.sandbox.create()
+    sandbox = Sinon.createSandbox()
     t.end()
   })
 

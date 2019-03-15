@@ -1,7 +1,7 @@
 'use strict'
 
 class BaseError extends Error {
-  constructor (code, message = '') {
+  constructor (code, message) {
     super(message)
     this.code = code
     this.name = this.constructor.name
