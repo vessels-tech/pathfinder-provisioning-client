@@ -1,6 +1,6 @@
 {
   "name": "@mojaloop/pathfinder-provisioning-client",
-  "version": "6.2.0",
+  "version": "7.1.0",
   "description": "Library for provisioning PathFinder records.",
   "main": "src/index.js",
   "license": "Apache-2.0",
@@ -20,20 +20,23 @@
     "test:unit": "tape 'test/unit/**/*.test.js'",
     "test:xunit": "tape 'test/unit/**/*.test.js' | tap-xunit",
     "test:coverage": "istanbul cover tape -- 'test/unit/**/*.test.js'",
-    "test:coverage-check": "npm run test:coverage && istanbul check-coverage"
+    "test:coverage-check": "npm run test:coverage && istanbul check-coverage",
+    "audit:resolve": "SHELL=sh resolve-audit",
+    "audit:check": "SHELL=sh check-audit"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "bluebird": "3.5.4",
-    "google-libphonenumber": "3.2.2",
+    "bluebird": "3.5.5",
+    "google-libphonenumber": "3.2.3",
     "request": "2.88.0",
     "xml2js": "0.4.19"
   },
   "devDependencies": {
     "faucet": "0.0.1",
     "istanbul": "1.1.0-alpha.1",
+    "npm-audit-resolver": "1.5.0",
     "pre-commit": "1.2.2",
     "proxyquire": "2.1.0",
     "sinon": "7.3.2",

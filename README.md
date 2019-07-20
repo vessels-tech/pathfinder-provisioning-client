@@ -359,3 +359,20 @@ A numeric value of the tier for the profile associated with the phone number.
 - `ServiceUnavailableError` Thrown if a 503 code is returned from PathFinder in SOAP response. 503 code means 'The server is currently unable to handle the request due to a temporary overload or maintenance on the server. The failure can be transient.'.
 - `UnhandledCodeError` Thrown if the code returned from PathFinder SOAP response is not recognized by this client.
 - `HttpStatusError` Thrown if the HTTP code returned from the PathFinder SOAP call is not 200.
+
+
+## Auditing Dependencies
+
+We use `npm-audit-resolver` along with `npm audit` to check dependencies for vulnerabilities, and keep track of resolved dependencies with an `audit-resolv.json` file.
+
+To start a new resolution process, run:
+```bash
+npm run audit:resolve
+```
+
+You can then check to see if the CI will pass based on the current dependencies with:
+```bash
+npm run audit:check
+```
+
+And commit the changed `audit-resolv.json` to ensure that CircleCI will build correctly.
